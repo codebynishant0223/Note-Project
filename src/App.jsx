@@ -64,8 +64,8 @@ const App = () => {
         <div className="flex flex-wrap items-start justify-start gap-5 h-[95%] overflow-auto">
           {Task.map((elem,idx) => {
             return (<div key={idx} className="relative h-50 w-50 rounded-2x p-5 bg-cover bg-[url('https://static.vecteezy.com/system/resources/thumbnails/010/793/873/small/a-lined-note-paper-covered-with-transparent-tape-on-a-yellow-background-with-a-white-checkered-pattern-free-png.png')]">
-             <h3 onClick={(e) =>{
-                deleteTask(e);
+             <h3 onClick={() =>{
+                deleteTask(idx);
              }} className="absolute top-5 right-6 bg-red-600 rounded-full text-xs cursor-pointer active:scale-90  "><X size={16} strockewidth={2.5}/></h3>
               <h3 className="font-bold text-xl leading-tight overflow-auto">{elem.Note}</h3>
               <p className="mt-2 leading-tight font-medium">{elem.Detail}</p>
